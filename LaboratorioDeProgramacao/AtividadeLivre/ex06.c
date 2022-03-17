@@ -13,10 +13,10 @@ int pesoIdeal(float N, float ALT) {
 
         if ( N == 1) {
             x =  72.7 *ALT - 58;
-            printf("\nO seu peso ideal e: %f", x);
+            printf("\nO seu peso ideal e: %.2f", x);
         } else if ( N == 2) {
             x = 62.1 *ALT - 44.77;
-            printf("\nO seu peso ideal e: %f", x);
+            printf("\nO seu peso ideal e: %.2f", x);
         }
     
 }

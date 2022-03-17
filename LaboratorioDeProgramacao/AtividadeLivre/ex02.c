@@ -12,6 +12,7 @@ float segundosCorrespondentes (float HORA, float MIN, float SEG) {
 		resultado = (SEG + (MIN * 60) + (HORA * 60 * 60));
 
 		return resultado;
+
 }
 
 int main () {
@@ -27,7 +28,8 @@ int main () {
     scanf("%f",&seg);
 	
 	
-	printf("\nO total de segundos e igual a: %f",segundosCorrespondentes(hora, min, seg));
+	printf("\nO total de segundos e igual a: %.2f",segundosCorrespondentes(hora, min, seg));
 
     printf ("\n_");
+
 }
