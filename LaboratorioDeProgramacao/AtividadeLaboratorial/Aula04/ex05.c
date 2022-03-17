@@ -1,20 +1,20 @@
 // Dev: Yago Romualdo Vieira
-// Matrícula: 2012064
+// Matricula: 2012064
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <math.h>
 
-int main(void) {
-	float N, num, D, R;
+float main(void) {
+	float NumDigitado, num, Soma;
 
     printf("Escreva um valor positivo: ");
-	scanf("%f",  &N);
+	scanf("%f",  &NumDigitado);
     
-    for (num = 0; num <= N; num++) {
+    for (num = 0; num <= NumDigitado; num++) {
         
-        if (num == 1)
-        {
+        if (num == 1) {
             printf("%0.0f", num);
             continue;
         }
@@ -23,15 +23,17 @@ int main(void) {
         printf(" + 1/%0.0f", num);
         }
 
-        D = num;
-
-        R += D;
-
-        if (num == N) {
-        printf("\nO resultado da soma e: %0.0f", R+1);
-        }
     }
- }
+
+    for (num = 1; num <= NumDigitado; num++) {
+
+    Soma += 1 / num;
+
+    }
+
+    printf("\n%0.2f", Soma);
+
+}
 
 
    

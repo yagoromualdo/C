@@ -7,12 +7,12 @@
 #include <math.h>
 
 int main(void) {
-    int  i, primo, N;
+    int  i, primo, N, A;
 
     printf("Escreva um numero qualquer: ");
     scanf("%i", &N);
 
-    for ( int A = 1; A < 2; A++) {
+    for ( A = 1; A < 2; A++) {
 	
 	        primo = 1;
 	 

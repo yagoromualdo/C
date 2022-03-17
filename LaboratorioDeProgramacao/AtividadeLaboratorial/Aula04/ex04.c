@@ -7,25 +7,37 @@
 #include <math.h>
 
 int jogo(){
- int h1,m1,h2,m2,t;
+ int Hora1, Minuto1, Hora2, Minuto2, t;
+
  printf("Digite a hora e depois os minutos do inicio do jogo\n");
- scanf("%d%d",&h1,&m1);
+
+ printf("Hora: ");
+ scanf("%d",&Hora1);
+ printf("Minuto: ");
+ scanf("%d",&Minuto1);
+
+
  printf("Digite a hora e depois os minutos do fim do jogo\n");
- scanf("%d%d",&h2,&m2);
- if(h1==h2&&m1==m2)  //considerando que houve jogatina
+
+  printf("Hora: ");
+ scanf("%d",&Hora2);
+ printf("Minuto: ");
+ scanf("%d",&Minuto2);
+
+ if(Hora1==Hora2&&Minuto1==Minuto2)  
  t=1140;
  else{
-  if(m1>m2){
-   if(h1>h2)
-   t=(((h2+24)-h1)*60)+((m2+60)-m1);
+  if(Minuto1>Minuto2){
+   if(Hora1>Hora2)
+   t=(((Hora2+24)-Hora1)*60)+((Minuto2+60)-Minuto1);
    else
-   t=((h2-h1)*60)+((m2+60)-m1);
+   t=((Hora2-Hora1)*60)+((Minuto2+60)-Minuto1);
   }
   else{
-   if(h1>h2)
-   t=(((h2+24)-h1)*60)+(m2-m1);
+   if(Hora1>Hora2)
+   t=(((Hora2+24)-Hora1)*60)+(Minuto2-Minuto1);
    else
-   t=((h2-h1)*60)+(m2-m1);
+   t=((Hora2-Hora1)*60)+(Minuto2-Minuto1);
   }
  }
  return t; 
@@ -33,7 +45,7 @@ int jogo(){
 main(){
  int partida;
  partida=jogo();
- printf("Tempo de jogo foi %d minutos",partida);
+ printf("O tempo de jogo foi %d minutos",partida);
  return 0;
 }
 

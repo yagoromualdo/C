@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
         "menor"
-    ]
+    ],
+    "files.associations": {
+        "locale.h": "c",
+        "stdlib.h": "c"
+    }
 }

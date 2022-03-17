@@ -27,7 +27,7 @@ if(b<c){
     main()
 {
    int a, b, c;
-   printf(" Digiete o Primeiro Valor: ");
+   printf(" Digite o Primeiro Valor: ");
    scanf("%d",&a);
    printf(" Digite o Segundo Numero: ");
    scanf("%d",&b);
