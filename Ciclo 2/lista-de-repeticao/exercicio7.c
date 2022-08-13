@@ -9,6 +9,7 @@ void main(){
     int i, cont;
 	
     for (i=0; i<= 9; i++) {
+    printf("\nPosicao: %i", i);
 	printf("\nEscreva sua idade: ");
 	scanf("%f",&idade[i]);
     }
