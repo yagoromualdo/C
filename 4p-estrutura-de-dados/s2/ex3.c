@@ -1,3 +1,5 @@
+// Dev: Yago Romualdo Vieira - 2012064
+
 #include <stdio.h>
 #include <stdlib.h>
 
