@@ -3,55 +3,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct lista_linear
-{
+struct lista_linear {
     int num;
     struct lista_linear *novoItem;
-};
+}; 
 typedef struct lista_linear node;
 node *lista = NULL, *final = NULL;
 
 void criar_lista_linear();
-void inserir_no_final(int value);
 void mostrar_lista_linear();
+void inserir_no_final(int value);
 void deletar_item(int value);
 
 int main() {
 
-    int value, i;
+    int value;
+  
+    criar_lista_linear();
 
-    while (1) {
-        if (i == 4)
-            break;
-
-        printf("\n-- MENU --\n");
-        printf("\n[1] Adicionar um numero na lista\n");
-        printf("\n[2] Visualizar lista \n");
-        printf("\n[3] Remover um numero da lista\n");
-        printf("\n[4] Sair \n");
-
-        printf("\nQual opcao voce deseja? ");
-        scanf("%d", &i);
-        switch (i) {
-            case 1: {
-                criar_lista_linear();
-                break;
-            }
-            case 2: {
-                mostrar_lista_linear();
-                break;
-            }
-            case 3: {
-                printf("\nQual o item  que voce deseja deletar\n");
-                scanf("%d", &value);
-                deletar_item(value);
-                break;
-            }
-            case 4: {
-                break;
-            }
-        }
-    }
+    printf("\nQual o item  que voce deseja deletar\n");
+    scanf("%d", &value);
+    deletar_item(value);
+    mostrar_lista_linear();
 
     return 0;
 }
@@ -60,7 +33,7 @@ void criar_lista_linear() {
     int val;
 
     while (1) {
-        printf("\nInsira um  numero: ");
+        printf("Inserir um  numero. (Para sair digite -1)\n");
 
         scanf("%d", &val);
 
@@ -68,8 +41,6 @@ void criar_lista_linear() {
             break;
 
         inserir_no_final(val);
-
-        break;
     }
 }
 
@@ -90,19 +61,7 @@ void inserir_no_final(int value) {
     }
 }
 
-void mostrar_lista_linear() {
-    printf("\nSua lista completa:\n");
 
-    node *myList;
-    myList = lista;
-
-    while (myList != NULL) {
-        printf("%d ", myList->num);
-
-        myList = myList->novoItem;
-    }
-    puts("");
-}
 
 void deletar_item(int value) {
     node *myNode = lista, *previous = NULL;
@@ -130,4 +89,16 @@ void deletar_item(int value) {
         printf("O item nao existe!\n");
 }
 
+void mostrar_lista_linear() {
+    printf("\nSua lista completa\n");
 
+    node *myList;
+    myList = lista;
+
+    while (myList != NULL) {
+        printf("%d ", myList->num);
+
+        myList = myList->novoItem;
+    }
+    puts("");
+}
